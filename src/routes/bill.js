@@ -10,4 +10,13 @@ router.post("/", async (req, res) => {
     }
 });
 
+router.get("/:id", async (req, res) => {
+    try {
+        const bill = await Bill.findOne({ uid: req.params.id }).populate("payment")
+        return res.send(bill)
+    } catch (error) {
+        res.status(500).send({ message: error.message });
+    }
+});
+
 module.exports = router;
