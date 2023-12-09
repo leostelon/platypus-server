@@ -13,10 +13,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@chainlink/env-enc": "^1.0.5",
+    "@chainlink/functions-toolkit": "^0.2.6",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^7.5.1",
-    "uuid": "^9.0.1"
+    "node-gyp": "^10.0.1",
+    "uuid": "^9.0.1",
+    "web3": "^4.3.0"
   }
 }
