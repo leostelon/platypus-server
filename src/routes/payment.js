@@ -10,4 +10,13 @@ router.post("/", async (req, res) => {
     }
 });
 
+router.get("/:address", async (req, res) => {
+    try {
+        const payments = await Payment.find({ address: req.params.address });
+        return res.send(payments)
+    } catch (error) {
+        res.status(500).send({ message: error.message });
+    }
+});
+
 module.exports = router;
